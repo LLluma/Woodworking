@@ -1,285 +1,312 @@
 import FreeCAD
+
+
 translate = FreeCAD.Qt.translate
 
+
 def QT_TRANSLATE_NOOP(context, text):
-	return text
+    return text
+
+
+import os
+import sys
 
 import FreeCADGui
 
-import os, sys
 import fakemodule
+
+
 path = os.path.dirname(fakemodule.__file__)
 iconPath = os.path.join(path, "Icons")
 
 
 # ######################################################################################################################
-class DOCS():
+class DOCS:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP(
+                "Workbench",
+                "Woodworking at FreeCAD - woodworking workbench documentation",
+            ),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - woodworking workbench documentation'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/Woodworking/tree/master/Docs")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/Woodworking/tree/master/Docs")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("DOCS", DOCS())
 
 
 # ######################################################################################################################
-class EXAMPLES():
+class EXAMPLES:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Woodworking at FreeCAD - fully parametric examples"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - fully parametric examples'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/Woodworking/tree/master/Examples/Parametric")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/Woodworking/tree/master/Examples/Parametric")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("EXAMPLES", EXAMPLES())
 
 
 # ######################################################################################################################
-class FIXTURE():
+class FIXTURE:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Woodworking at FreeCAD - fixture examples"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - fixture examples'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("FIXTURE", FIXTURE())
 
 
 # ######################################################################################################################
-class TEXTURES():
+class TEXTURES:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Woodworking at FreeCAD - free woodworking textures"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Woodworking at FreeCAD - free woodworking textures'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://commons.wikimedia.org/w/index.php?title=Special:ListFiles/Dprojects&ilshowall=1")
 
-		import webbrowser
-		webbrowser.open("https://commons.wikimedia.org/w/index.php?title=Special:ListFiles/Dprojects&ilshowall=1")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("TEXTURES", TEXTURES())
 
 
 # ######################################################################################################################
-class DOCSgetDimensions():
+class DOCSgetDimensions:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Tool documentation - getDimensions, cut-list, BOM"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - getDimensions, cut-list, BOM'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/getDimensions/tree/master/Docs")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/getDimensions/tree/master/Docs")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("DOCSgetDimensions", DOCSgetDimensions())
 
 
 # ######################################################################################################################
-class DOCSsheet2export():
+class DOCSsheet2export:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Tool documentation - sheet2export"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - sheet2export'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/sheet2export")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/sheet2export")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("DOCSsheet2export", DOCSsheet2export())
 
 
 # ######################################################################################################################
-class DOCSsetTextures():
+class DOCSsetTextures:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Tool documentation - setTextures"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - setTextures'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/setTextures")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/setTextures")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("DOCSsetTextures", DOCSsetTextures())
 
 
 # ######################################################################################################################
-class DOCSscanObjects():
+class DOCSscanObjects:
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "Docs.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Tool documentation - scanObjects"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Opens web browser with external link."),
+            "Accel": "",
+        }
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "Docs.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Tool documentation - scanObjects'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Opens web browser with external link.'),
-				"Accel"   : ""}
+    def Activated(self):
+        import webbrowser
 
-	def Activated(self):
+        webbrowser.open("https://github.com/dprojects/scanObjects")
 
-		import webbrowser
-		webbrowser.open("https://github.com/dprojects/scanObjects")
+        return
 
-		return
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
 
 FreeCADGui.addCommand("DOCSscanObjects", DOCSscanObjects())
 
 
 # ######################################################################################################################
-class AUTOUPDATE():
+class AUTOUPDATE:
+    gUpdated = ""
+    gSkipped = ""
 
-	gUpdated = ""
-	gSkipped = ""
+    def updateTool(self, iTool, iRoot="https://raw.githubusercontent.com/dprojects/"):
+        import urllib.request
 
-	def updateTool(self, iTool, iRoot="https://raw.githubusercontent.com/dprojects/"):
-		
-		import urllib.request
-		
-		try:
-			module = iTool
-		
-			filePath = os.path.join(path, "Tools")
-			filePath = os.path.join(filePath, module+".py")
-			
-			httplink = iRoot
-			httplink += module + "/master/" + module + ".py"
-			urllib.request.urlretrieve(httplink, filePath)
-			
-			self.gUpdated += "\t + " + module + "\t\n"
-		except:
-			self.gSkipped += "\t - " + module + "\t\n"
-		
-		return
+        try:
+            module = iTool
 
-	def GetResources(self):
-		return {"Pixmap"  : os.path.join(iconPath, "autoupdate.png"),
-				"MenuText": QT_TRANSLATE_NOOP('Workbench', 'Download and update all macro tools'),
-				"ToolTip" : QT_TRANSLATE_NOOP('Workbench', 'Download latest versions for all macro tools.'),
-				"Accel"   : ""}
+            filePath = os.path.join(path, "Tools")
+            filePath = os.path.join(filePath, module + ".py")
 
-	def Activated(self):
+            httplink = iRoot
+            httplink += module + "/master/" + module + ".py"
+            urllib.request.urlretrieve(httplink, filePath)
 
-		self.gUpdated = ""
-		self.gSkipped = ""
+            self.gUpdated += "\t + " + module + "\t\n"
+        except:
+            self.gSkipped += "\t - " + module + "\t\n"
 
-		self.updateTool("getDimensions")
-		self.updateTool("sheet2export")
-		self.updateTool("scanObjects")
-		self.updateTool("setTextures")
+        return
 
-		info = ""
-		
-		if self.gUpdated != "":
-			info += translate('manuAutoupdate', 'Updated macro tools:')
-			info += "\n\n"
-			info += self.gUpdated
-			info += "\n\n"
-		
-		if self.gSkipped != "":
-			info += translate('manuAutoupdate', 'Skipped macro tools:')
-			info += "\n\n"
-			info += self.gSkipped
-			info += "\n\n"
-		
-		from PySide import QtGui, QtCore
-		title = translate('manuAutoupdate', 'Macro tools - autoupdate')
-		QtGui.QMessageBox.information(None, title, str(info))
-		
-		return
+    def GetResources(self):
+        return {
+            "Pixmap": os.path.join(iconPath, "autoupdate.png"),
+            "MenuText": QT_TRANSLATE_NOOP("Workbench", "Download and update all macro tools"),
+            "ToolTip": QT_TRANSLATE_NOOP("Workbench", "Download latest versions for all macro tools."),
+            "Accel": "",
+        }
 
-	def IsActive(self):
-		# not needed now, maybe in the future
-		return True
+    def Activated(self):
+        self.gUpdated = ""
+        self.gSkipped = ""
+
+        self.updateTool("getDimensions")
+        self.updateTool("sheet2export")
+        self.updateTool("scanObjects")
+        self.updateTool("setTextures")
+
+        info = ""
+
+        if self.gUpdated != "":
+            info += translate("manuAutoupdate", "Updated macro tools:")
+            info += "\n\n"
+            info += self.gUpdated
+            info += "\n\n"
+
+        if self.gSkipped != "":
+            info += translate("manuAutoupdate", "Skipped macro tools:")
+            info += "\n\n"
+            info += self.gSkipped
+            info += "\n\n"
+
+        from PySide import QtCore, QtGui
+
+        title = translate("manuAutoupdate", "Macro tools - autoupdate")
+        QtGui.QMessageBox.information(None, title, str(info))
+
+        return
+
+    def IsActive(self):
+        # not needed now, maybe in the future
+        return True
+
 
 FreeCADGui.addCommand("AUTOUPDATE", AUTOUPDATE())
 
 
 # ######################################################################################################################
 def getItems():
+    parts = []
 
-	parts = []
+    parts = [
+        "DOCS",
+        "EXAMPLES",
+        "FIXTURE",
+        "TEXTURES",
+        "DOCSgetDimensions",
+        "DOCSsheet2export",
+        "DOCSsetTextures",
+        "DOCSscanObjects",
+        "AUTOUPDATE",
+    ]
 
-	parts = [ 
-		"DOCS",
-		"EXAMPLES",
-		"FIXTURE",
-		"TEXTURES",
-		"DOCSgetDimensions",
-		"DOCSsheet2export",
-		"DOCSsetTextures",
-		"DOCSscanObjects",
-		"AUTOUPDATE"
-	]
-
-	return parts
+    return parts

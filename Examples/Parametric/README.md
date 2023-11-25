@@ -352,6 +352,6 @@ Idea behind this examples folder is to have fully parametric furniture examples 
 
 All the examples here should follow the rules:
 * Fully parametric as much as possible.
-* Should be built in the supported way by [getDimensions](https://github.com/dprojects/getDimensions) macro tool. 
+* Should be built in the supported way by [getDimensions](https://github.com/dprojects/getDimensions) macro tool.
 
 This approach will be more useful for future projects than static examples, I guess.

@@ -26,7 +26,7 @@ For more details see: [Woodworking workbench documentation](https://github.com/d
 	* [Angle 30 x 30 x 25 mm](#angle-30-x-30-x-25-mm)
 	* [Angle 80 x 80 x 20 mm](#angle-80-x-80-x-20-mm)
 	* [Angle 40 x 40 x 100 mm](#angle-40-x-40-x-100-mm)
-	
+
 # Dowels
 
 ### Dowel 8 x 35 mm
@@ -210,4 +210,3 @@ For more details see: [Woodworking workbench documentation](https://github.com/d
 | **Download:** | [Angle_40_x_40_x_100_mm.FCStd](https://github.com/dprojects/Woodworking/raw/master/Examples/Fixture/Angles/Angle_40_x_40_x_100_mm.FCStd)
 
 ![Angle_40_x_40_x_100_mm](https://raw.githubusercontent.com/dprojects/Woodworking/master/Examples/Fixture/Screenshots/Angle_40_x_40_x_100_mm.png)
-

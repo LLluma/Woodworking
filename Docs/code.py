@@ -3,17 +3,18 @@
 
 import sys
 
-try:
-	del sys.modules["MagicPanels"]
-except:
-	skip = 1
-	
-try:
-	del sys.modules["MagicPanelsController"]
-except:
-	skip = 1
 
 try:
-	del sys.modules["RouterPatterns"]
+    del sys.modules["MagicPanels"]
 except:
-	skip = 1
+    skip = 1
+
+try:
+    del sys.modules["MagicPanelsController"]
+except:
+    skip = 1
+
+try:
+    del sys.modules["RouterPatterns"]
+except:
+    skip = 1

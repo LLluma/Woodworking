@@ -1,4 +1,4 @@
 import MagicPanelsController
 
-MagicPanelsController.panelBackOut()
 
+MagicPanelsController.panelBackOut()

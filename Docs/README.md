@@ -1,6 +1,6 @@
 # Woodworking workbench documentation
 
-<img align="right" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/Woodworking.png"> FreeCAD is a very cool software and allows to design a lot of interesting things. However, FreeCAD is not dedicated to be software only for furniture designing. For this reason, some tasks when designing furniture can be challenging at the beginning. Despite the fact that I finished math, I have a problem with counting in my memory. For me, constantly calculating wood thickness and adding this to the position was a problem without a calculator. In addition, for me constantly starting from the `10 x 10 x 10` box `Cube` and setting it in the right position is a bit annoying. 
+<img align="right" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/Woodworking.png"> FreeCAD is a very cool software and allows to design a lot of interesting things. However, FreeCAD is not dedicated to be software only for furniture designing. For this reason, some tasks when designing furniture can be challenging at the beginning. Despite the fact that I finished math, I have a problem with counting in my memory. For me, constantly calculating wood thickness and adding this to the position was a problem without a calculator. In addition, for me constantly starting from the `10 x 10 x 10` box `Cube` and setting it in the right position is a bit annoying.
 
 Woodworking workbench has been created because of my woodworking and coding hobby. Everything started from [getDimensions](https://github.com/dprojects/getDimensions/commits/master) project long time ago. I wanted to have [simple cut-list for chipboards order](https://github.com/dprojects/getDimensions/commit/a6f0a2221e90f717be95bd0dc1cc9f1ede95a329) and I found FreeCAD with low hardware requirements and possibility to implement the cut-list. Now it has been transformed into whole Woodworking workbench. The main goal for this workbench is to make the furniture designing process at FreeCAD more simple.
 
@@ -141,13 +141,13 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 * **Panel from vertices:** To create panel from vertices, you have to activate observer. The `first` means the thickness will be get from first selected object. You can set custom thickness if you want.
 
 **Options:**
-  
+
 * **Plane:** You can select panel orientation according to the `XYZ` coordinate axes. The panel can be created at planes: `XY`, `YX`, `XZ`, `ZX`, `YZ`, `ZY`, if you select single face. If you select two faces this tool automatically recognize plane of selected faces and adjust possible panels to create, there will be two panels for valid planes only.
 * **Anchor:** You can select position for the new panel. The anchors are the face vertices. If the object is for example `Cut` there might be more than four anchors to choose.
 * **Size:** Custom size is taken from edges. For example, if you have `Cut` object you can set panel with the same size as the cut edge. All edges should be available, search for the right one.
 * **Offset:** The first selected offset means `no offset` from currently selected `Anchor`. All next are offset with current selected `Size` for `X-`, `X+`, `Y-`, `Y+`, `Z-`, `Z+` coordinate axis. This can be helpful if you want to make frame but the frame is for example `20 mm x 40 mm x 600 mm` and need to be offset with `40 mm`, different size than thickenss `20 mm`.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Panel from vertices](https://www.youtube.com/watch?v=6s0fbagPeZA)
 * [Making panels improvement](https://www.youtube.com/watch?v=sunE2rLThZI)
 
@@ -155,7 +155,7 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 
 ### magicResizer
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicResizer.png"> This tool allows to resize `Cube` or `Pad` panel and also other objects based on `Pad` e.g. construction profiles. Make sure your `Pad` object has defined constraints, you can use [showConstraints](#showConstraints) tool for that. If the object has no constraint at the selected edge the object will not be resized. The constraints do not have to be named but must be defined. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicResizer.png"> This tool allows to resize `Cube` or `Pad` panel and also other objects based on `Pad` e.g. construction profiles. Make sure your `Pad` object has defined constraints, you can use [showConstraints](#showConstraints) tool for that. If the object has no constraint at the selected edge the object will not be resized. The constraints do not have to be named but must be defined.
 
 **Options:**
 
@@ -167,12 +167,12 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 
 * **Selected edge and vertex:** This mode allows to resize the object more precisely. You can select vertex to resize the object exactly to the selected point. To use this mode, first select edge to resize and next select nearest vertex of any other object. Use `resize to nearest` button in this mode.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Smart resizer tool](https://www.youtube.com/watch?v=t1G7qnRfAgY)
 
 ### showConstraints
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showConstraints.png"> To use this tool first select objects to see edges with the same size as defined constraints. **Note:** This tool search all constraints for selected objects. If the constraints is non-zero this tool search for all edges with the same size. It allows for quick preview if all the edges are defined by the Sketch. However, in some cases, if the constraints is offset and it is equal edge size this will give false result. To select more objects hold left CTRL key during selection. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showConstraints.png"> To use this tool first select objects to see edges with the same size as defined constraints. **Note:** This tool search all constraints for selected objects. If the constraints is non-zero this tool search for all edges with the same size. It allows for quick preview if all the edges are defined by the Sketch. However, in some cases, if the constraints is offset and it is equal edge size this will give false result. To select more objects hold left CTRL key during selection.
 
 <br><br><br>
 
@@ -184,16 +184,16 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 
 ### magicMove
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicMove.png"> This tool allows to move, copy or mirror panel with custom step. This tool support multi-selection, so you can move, copy or mirror many objects at once. It automatically show coordinate center and resize the corner axes. You can also resize the corner axes or turn on and off the center axes. This tool recognize holding button, so you can press once the arrow and hold it, and the selected part will be moving in desired direction with exact step. This approach allows, to precisely move objects and also do it quickly without clicking arrows icons many times. You can also copy objects along coordinate axes or make mirror. At FreeCAD you can use arrays but arrays make problems in case of edgeband because arrays have more than 6 faces. With this copy option you can quickly create many objects and avoid the multiple faces problem. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicMove.png"> This tool allows to move, copy or mirror panel with custom step. This tool support multi-selection, so you can move, copy or mirror many objects at once. It automatically show coordinate center and resize the corner axes. You can also resize the corner axes or turn on and off the center axes. This tool recognize holding button, so you can press once the arrow and hold it, and the selected part will be moving in desired direction with exact step. This approach allows, to precisely move objects and also do it quickly without clicking arrows icons many times. You can also copy objects along coordinate axes or make mirror. At FreeCAD you can use arrays but arrays make problems in case of edgeband because arrays have more than 6 faces. With this copy option you can quickly create many objects and avoid the multiple faces problem.
 
 **Options:**
 
 * **Move:** In this mode you can move any object with custom step. If the object is recognized the `Move step` will be set by default with selected object thickness. You can also move containers. It can be used if you want to move many objects, for exampe panel with dowels.
 
-* **Copy:** In copy mode you can quickly create arrays, sets of many objects perfectly aligned with custom offset. 
+* **Copy:** In copy mode you can quickly create arrays, sets of many objects perfectly aligned with custom offset.
   * `copyObject` by default, good for simple objects like `Cube`.
   * `Clone` is useful, if you want to make copy of `Body` or `Part` with many Bodies.
-  * `Link` if you want to copy `LinkGroup` and generate cut-list, it is better to set this copy option. 
+  * `Link` if you want to copy `LinkGroup` and generate cut-list, it is better to set this copy option.
   * `copy to new container` button allows to create LinkGroup container for new copies. If you click the button this will turn into disabled and will be waiting for new copy created. If you click to create new copies, all the copies will be moved to the new created container. This allows for better Tree manage without manual searching all the objects.
   * `Copy offset` this is offset between original selected object or last copied element and next copied element. If this is set to `0` the next element will be created without space in relation to the last element. For example if you set `10` and click `X+` many times, the space before each copied elements will be `10`.
 
@@ -206,7 +206,7 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 
 * **Mirror:** This option create mirror with offset. You can select single element like `Cube` or container like `LinkGroup` with more elements inside. This tool calculates occupied space by the selected element and add new element with given offset. If you have dowels the space will be calculated from dowels to dowels. This option recognize if the selected object is LinkGroup container and if not, it will create `LinkGroup` for the object, so you will be able to extend, build on this object later.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Smart move & copy](https://www.youtube.com/watch?v=gh0Sc0eLooQ)
 * [Mirror with offset](https://www.youtube.com/watch?v=DG7eUsz8-0c)
 * [Copy along path](https://www.youtube.com/watch?v=PIm31aVuBUA)
@@ -220,16 +220,16 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 * **Sphere radius** Allows you to resize rotation indicator sphere. This tool checks reference for the object, content of containers and get size to set the default size of the sphere. by default the sphere radius is set to object thickness. You can increase or decrease the value or set your custom one.
 * **Rotation point** Allows you to switch between several predefined rotation points. If the predefined points not allows you to rotate the object as you wish, you can add your custom point. You can select vertex, face or edge and click `add selected vertex`. If the selected sub-object is face the vertex will be set to its CenterOfMass. If the sub-object is edge the first vertex for the edge will be set. There is also ration, that show you how many rotation points you have to choose and which one is currently chosen.
 
-* **X, Y, Z** Allows to rotate object according to the axis. There is also screen with current rotation status so you can quickly rotate back the object. You can also choose your custom `Angle step` for rotation. 
+* **X, Y, Z** Allows to rotate object according to the axis. There is also screen with current rotation status so you can quickly rotate back the object. You can also choose your custom `Angle step` for rotation.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Quick parametric fence](https://www.youtube.com/watch?v=egmC-uR4aa4)
 
 ### mapPosition
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/mapPosition.png"> First select object to copy position, next select objects to move. **Note:** This tool allows to move objects to the same position as first selected object. The objects will be moved without rotation. Only the placement will change. If the first selected object is rotated the objects may not match exactly the starting point. This tool is very useful if you want to redesign furniture and you want to create new element. Using this tool you can quickly move the new element to the same position of old element and remove the old element. To select more objects hold left CTRL key during selection. With this tool you can also move Cylinders and Sketches more precisely. If first you select Edge or Face the Cylinders or Sketches will be moved to the CenterOfMass. If first you select Vertex the Cylinders or Sketches will be moved to the selected Vertex position.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Mapping position](https://www.youtube.com/watch?v=841xzb_uRpc)
 * [mapPosition little improved](https://www.youtube.com/watch?v=pMKLXvwmGSI)
 
@@ -237,7 +237,7 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panelMove2Face.png"> This tool allows to align panels or any other objects to face position. First select face and next select objects you want to align with face position. You can select objects at objects `Tree` window holding `left CTRL key`. This tool allows to avoid thickness step problem, if you want to move panel to the other edge but the way is not a multiple of the panel thickness. However, it not cover all possible situations. This tool move object to the first `0 vertex` (beginning of the panel).
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Simple table](https://www.youtube.com/watch?v=Xru52f8uyBk)
 * [Move to face](https://www.youtube.com/watch?v=i9pXqdEhahU)
 
@@ -247,30 +247,30 @@ This tool allows to preview panel before creation. It allows to see panel at sin
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panelMove2Anchor.png"> This tool allows to align panels more precisely, with anchor. To align panels with anchors first select anchor at base object, next select anchor at each object to move. Hold left CTRL key to select anchors.
 
-Available anchors to select: 
+Available anchors to select:
 
 * **vertex** - selected vertex will be set as anchor,
 * **edge** - CenterOfMass of the selected face will be set as anchor,
 * **face** - CenterOfMass of the selected face will be set as anchor,
 * **object** - default object anchor, of the Placement, will be set as anchor.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Align to anchor](https://www.youtube.com/watch?v=IfVJVXVc9r8)
 
 <br><br><br>
 
 ### panelMove2Center
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panelMove2Center.png"> This tool allows to move objects to the center of two holes or two vertices. The edge holes or vertices should lie on one of the coordinate axes `XYZ`. The object can be `Cylinder`, `Cone` (dril bit), `Cube` (panel), `Pad` or `LinkGroup` with as many objects you want. If you want to move `Pad`, select `Body`. If you want to move many Pads, select Body or pack all `Part` into `LinkGroup` and select `LinkGroup` to move. Make sure you do not have `Sketch` position set. This tool use `.Shape.CenterOfMass` but if it is not available for object like it is for `LinkGroup` the center will be calculated from vertices. You can move to the center many objects at once. Hold left CTRL key during selection. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panelMove2Center.png"> This tool allows to move objects to the center of two holes or two vertices. The edge holes or vertices should lie on one of the coordinate axes `XYZ`. The object can be `Cylinder`, `Cone` (dril bit), `Cube` (panel), `Pad` or `LinkGroup` with as many objects you want. If you want to move `Pad`, select `Body`. If you want to move many Pads, select Body or pack all `Part` into `LinkGroup` and select `LinkGroup` to move. Make sure you do not have `Sketch` position set. This tool use `.Shape.CenterOfMass` but if it is not available for object like it is for `LinkGroup` the center will be calculated from vertices. You can move to the center many objects at once. Hold left CTRL key during selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Move to center](https://www.youtube.com/watch?v=zKttrKdahg8)
 
 <br><br><br>
 
 ### align2Curve
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/align2Curve.png"> This tool allows to align panels to the curve. It has been created for magicMove Copy Path option, to align panels to the curve. To select more objects hold left CTRL key during selection. To use this tool the panel need to have only single axis rotation offset. For example if you rotate panel 35 degrees around Y axis the vertex will touch the curve. This tool not works if you need to rotate the panel additionally, for example 15 degrees around X axis. For more details see description at documentation page. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/align2Curve.png"> This tool allows to align panels to the curve. It has been created for magicMove Copy Path option, to align panels to the curve. To select more objects hold left CTRL key during selection. To use this tool the panel need to have only single axis rotation offset. For example if you rotate panel 35 degrees around Y axis the vertex will touch the curve. This tool not works if you need to rotate the panel additionally, for example 15 degrees around X axis. For more details see description at documentation page.
 
 Selection modes:
 
@@ -278,7 +278,7 @@ Selection modes:
 
 * **Curve and Vertex** In this mode you can select curve and next vertex at each object you want to align to the curve. This mode is more precised and slower. It allow to align panel backwards, so the selected vertex will be before he anchor. In this mode the tool will try to search the curve from the nearest side of the vertex. If the curve will be found the panel will be aligned, otherwise the panel will be skipped.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Align to curve](https://www.youtube.com/watch?v=fbJV_SEuNLg)
 
 <br><br><br>
@@ -291,18 +291,18 @@ Selection modes:
 
 ### magicDowels
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicDowels.png"> This tool allows to add mounting points to panels. You can add predefined mounting points e.g. screws, dowels, shelf supporter pins or add custom mounting points. This is very quick way to add mounting points to the furniture, no calculation needed to place dowel exactly in the middle of the edge. If you would like to add e.g. 40 dowels to the whole furniture and align all of them manually, it would probably be big challenge. With this tool you can do it with single click in many cases. Make sure the green faces are visible, because they refers to the head of the screw. If you would like to replace the dowels with detailed screw later, this might be important if the dowel is rotated incorrectly, the screw will be rotated incorrectly as well. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicDowels.png"> This tool allows to add mounting points to panels. You can add predefined mounting points e.g. screws, dowels, shelf supporter pins or add custom mounting points. This is very quick way to add mounting points to the furniture, no calculation needed to place dowel exactly in the middle of the edge. If you would like to add e.g. 40 dowels to the whole furniture and align all of them manually, it would probably be big challenge. With this tool you can do it with single click in many cases. Make sure the green faces are visible, because they refers to the head of the screw. If you would like to replace the dowels with detailed screw later, this might be important if the dowel is rotated incorrectly, the screw will be rotated incorrectly as well.
 
 **Options:**
 
 * **Select edge:** You can choose the edge for the dowels. Normally, there are 4 edges but if the object is for example `boolean Cut` there might be as many edges, as the panel has been cut.
-* **Adjust edge:** Allows to adjust offset from the edge. This option is useful if by default the dowels not sink to the surface, so there is problem with correct positioning by default. 
-* **Adjust sink:** With this option you can change the sign for the sink. Sometimes it solves the problem with correct positioning and further adjust is not needed. The `0` is to set the sink to zero. It is useful if you want to add reference points for custom screw types. 
+* **Adjust edge:** Allows to adjust offset from the edge. This option is useful if by default the dowels not sink to the surface, so there is problem with correct positioning by default.
+* **Adjust sink:** With this option you can change the sign for the sink. Sometimes it solves the problem with correct positioning and further adjust is not needed. The `0` is to set the sink to zero. It is useful if you want to add reference points for custom screw types.
 * **Adjust rotation:** You can rotate the dowels. There are some predefined rotations according to the current face plane  to speed up this process.
 * **Select sides:** You can choose the side for the dowels, left side only, right side only or both sides.
-* **Text inputs:** You can set your custom values here and click `set custom values` to apply the settings to the dowels and see how they change. If you select new object `Offset from edge` will be automatically set to the selected panel thickenss but all other settings will stay as they are allowing you to keep the custom settings. If you change predefined settings all the custom settings will be replaced with predefined values. 
+* **Text inputs:** You can set your custom values here and click `set custom values` to apply the settings to the dowels and see how they change. If you select new object `Offset from edge` will be automatically set to the selected panel thickenss but all other settings will stay as they are allowing you to keep the custom settings. If you change predefined settings all the custom settings will be replaced with predefined values.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Adding dowels](https://www.youtube.com/watch?v=q7tJffBBUGY)
 * [Make quickly 168 dowels](https://www.youtube.com/watch?v=_a_Q7BjEHLA)
 
@@ -310,28 +310,28 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2link.png"> This tool allows to replace simple objects with any detailed object, e.g. `Cylinders` with realistic looking screws made using `PartDesign`. First you have to select detailed object, next select simple objects to replace with `Links`. The first selected detailed object can be `Part`, `LinkGroup` or any other created manually or merged with your project. You can replace more than one simple object at once with `Link`. To select more objects hold left `CTRL` key during selection. The simple objects should imitate the detailed object to replace all of them in-place with realistic looking one. For more details please see: [Fixture examples](https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture).
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Dowels and Screws are fully parametric](https://www.youtube.com/watch?v=hWaM19edjFE)
 
 ### panel2clone
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2clone.png"> This tool allows to replace simple objects with any detailed object, e.g. `Cylinders` with realistic looking screws made using `PartDesign`. First you have to select detailed object, next simple objects to replace with `Clones`. The first selected detailed object can be `Part`, `LinkGroup` or any other created manually or merged with your project. You can replace more than one simple object at once with `Clone`. To select more objects hold left `CTRL` key during selection. The simple objects should imitate the detailed object to replace all of them in-place with realistic looking one. This tool works with the same way as [panel2link](#panel2link) but instead of `Links` it creates `Clones` objects. It can be useful if you want to remove the base object and have clean objects Tree. Also if you want to change each copy separately. [Fixture examples](https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture).
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Dowels and Screws are fully parametric](https://www.youtube.com/watch?v=hWaM19edjFE)
 
 ### sketch2dowel
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sketch2dowel.png"> First select face, next Sketches of the holes to create dowels. This tool allows to create dowel from Sketch of the hole. The first selected face refers to the side the dowel will be raised, exact orientation for the dowel. Dowel position will be get from the Sketch. The dowel Radius and Height will be get from hole object. If the hole is throughAll the dowel height will be very big, so make sure you use dimensions for hole. To select more Sketches hold left CTRL key during selection. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sketch2dowel.png"> First select face, next Sketches of the holes to create dowels. This tool allows to create dowel from Sketch of the hole. The first selected face refers to the side the dowel will be raised, exact orientation for the dowel. Dowel position will be get from the Sketch. The dowel Radius and Height will be get from hole object. If the hole is throughAll the dowel height will be very big, so make sure you use dimensions for hole. To select more Sketches hold left CTRL key during selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Dowels from Sketch](https://www.youtube.com/watch?v=CI4M5_DDWSg)
 
 ### edge2dowel
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/edge2dowel.png"> This tool allows to create dowels above the selected hole edges. To create dowel select edge of the hole. You can select many edges at once but all the holes need to be at the same object. The dowel Height will be 40. The dowel radius will be get from the selected edge hole radius. To select more objects hold left CTRL key during selection. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/edge2dowel.png"> This tool allows to create dowels above the selected hole edges. To create dowel select edge of the hole. You can select many edges at once but all the holes need to be at the same object. The dowel Height will be 40. The dowel radius will be get from the selected edge hole radius. To select more objects hold left CTRL key during selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Dowels from holes](https://www.youtube.com/watch?v=l8-Jven6VTQ)
 
 <br><br><br>
@@ -390,7 +390,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/cutDowels.png"> This tool is designed to allow drilling for designing approach based on Cut holes using Cylinders without creating PartDesign objects. This tool allows you to automatically cut all dowels from selected panel. You do not have to select and search exact dowels that belongs to the selected panel. If you select panel, this tool search for all dowels that belongs to the selected panel and apply Boolean Cut on the panel. You can select many panels at once to cut dowels. To select more panels hold left CTRL key during selection. During this process only the copies will be used to cut, so the original Cylinders will not be moved at the objects Tree and will be visible at cut-list report. This feature is sensitive for visibility of Cylinders. So, you can hide Cylinders you do not want to be cut out from the panel.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Search and cut dowels](https://www.youtube.com/watch?v=Oogs8LqkReQ)
 
 ## Construction
@@ -399,28 +399,28 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2profile.png"> Please select valid `Cube` or `Pad` object imitating profile. The selected `Cube` or `Pad` objects need to have two equal sizes e.g. `20 mm x 20 mm x 300 mm` to replace it with construction profile. **Note:** This tool allows to replace panel with construction profile. You can replace more than one panel at once. To select more panels hold left `CTRL` key during selection. The new created construction profile will get the same dimensions, placement and rotation as the selected panel. If you have all construction created with simple panel objects that imitating profiles, you can replace all of them with realistic looking construction profiles with single click.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Construction profiles](https://www.youtube.com/watch?v=5hXMFAxXQag)
 
 ### panel2angle
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2angle.png"> Please select valid faces at any amount of `Cubes` or `Pads` to cut the faces and create construction angle profiles. **Note:** This tool allows to replace panel with construction angle. You can replace more than one panel at once. To select more faces hold left `CTRL` key during faces selection. The new created construction angle will get the same dimensions, placement and rotation as the selected panel. You can cut any faces at panel. However, if the panel has two equal sizes e.g. `20 mm x 20 mm x 600 mm`, the ends will be cut as well, so you do not have to select them. If you do not have same sizes you have have to select ends too, if you want to cut them. If the selected faces are not valid, e.g. opposite faces, the final object may disappear and be broken. You can remove last operation and try again. If you have all construction created with simple panels that imitating angles, you can replace all of them with realistic looking construction angles with single click and they will be rotated according to the selected faces.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Construction profiles](https://www.youtube.com/watch?v=5hXMFAxXQag)
 
 ### panel2angle45cut
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2angle45cut.png"> Please select valid face at construction angle to create 45 cut at edges. **Note:** This tool allows to cut construction angle with 45 cut. You can select many construction angles at once but only single face can be selected for each construction angle. If the construction angle is C-shape you can select face inside profile and two sides will be cut. If the construction angle is L-shape you select single face inside profile and only single side will be cut. Because to create frame with L-shape profiles you have to cut only single side. To create frame with C-shape profiles you have to cut both sides. The face should be selected inside profile to set exact cut size without profile thickness. To select more faces hold left `CTRL` key during faces selection. You can remove last operation and try again. If you have all construction created with construction angles you can cut all of them at once.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Construction profiles](https://www.youtube.com/watch?v=5hXMFAxXQag)
 
 ### cornerBlock
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/cornerBlock.png"> Please select single edge at each panel you want to change into corner block. **Note:** This tool allows to create corner block from selected edge. The cut size will be the panel thickness. For example you can create Cube 100 mm x 100 mm x 100 mm in the corner of the table to support table leg, and you can change it into corner block, quickly with single click. You can replace more than one panel at once. Hold left CTRL key during edges selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Table corner block](https://www.youtube.com/watch?v=Fyss9sZ4AgE)
 
 <br><br><br>
@@ -429,7 +429,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/cornerBrace.png"> Please select single edge at each panel you want to change into corner brace. **Note:** This tool allows to create corner brace from selected edge (the single visible edge). The cut size will be the panel thickness for the first edge and for the second edge half of the thickness. So, you get nice looking corner brace with single click. For example you can create Cube 100 mm x 100 mm x 100 mm in the corner of the table to support table leg, and you can change it into corner brace, quickly with single click. You can replace more than one panel at once. Hold left CTRL key during edges selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Table corner brace](https://www.youtube.com/watch?v=Y9Wa4o9N1mM)
 
 <br><br><br>
@@ -457,14 +457,14 @@ Selection modes:
 * **create Tenon** Create `PartDesign :: Pad` above the current `Sketch` pattern position at the selected face.
 * **create Tenon and Mortise** If you have selected 3rd selection, face for Mortise, you can create Tenon and Mortise with single click.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Playlist for Joinery](https://www.youtube.com/playlist?list=PLSKOS_LK45BBG8kJ2AZvQKBfOSfzhTrLt)
 
 ### magicCut
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicCut.png"> This tool make multi boolean cut operation at selected objects. First object should be the base object to cut. All other selected objects will cut the base 1st selected object. To select more objects hold left CTRL key during selection. During this process only the copies will be used to cut, so the original objects will not be moved at tree. Also there will be auto labeling to keep the cut tree more informative and cleaner. If you are looking for parametric Boolean Cut operation you may consider [magicCutLinks](#magiccutlinks) instead.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Skip copies in cut-list](https://www.youtube.com/watch?v=rFEDLaD8lxM)
 * [Boolean cut with containers](https://www.youtube.com/watch?v=OVwazL8MQwI)
 
@@ -474,7 +474,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicCutLinks.png"> This tool make multi boolean cut operation at selected objects. First object should be the base object to cut. All other selected objects will cut the base 1st selected object. To select more objects hold left CTRL key during selection. During this process only the links will be used to cut, so the original objects will not be moved at tree. Also there will be auto labeling to keep the cut tree more informative and cleaner. This tool works with the same way as [magicCut](#magiccut) tool but creates LinkGroup container for cut panels, knives, and uses container links for cut operation. Thanks to this approach you can change Cube to Pad or even add new element to the LinkGroup container and the cut will be updated with new content. So, if you are looking for parametric cut, you should rather use this version.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Boolean cut with links](https://www.youtube.com/watch?v=EE-A6CMgb-4)
 
 <br><br><br>
@@ -483,7 +483,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicKnife.png"> This tool is opposite for [magicCut](#magiccut) tool. This tool allows to use single knife to cut many panels. First selected object should be knife, and all other selected objects will be cut with the knife. The knife can be any object. So, you can create your own shape of the knife and cut many panels at once. Also you can cut all legs of the table using floor or top of the table as knife. To select more objects hold left CTRL key during selection. During this process the copies of knife are used, so the original knife objects will not be moved at tree. Also there will be auto labeling to keep the cut tree more informative and cleaner. If you are looking for parametric Boolean Cut operation you may consider [magicKnifeLinks](#magicknifelinks) instead.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Skip copies in cut-list](https://www.youtube.com/watch?v=rFEDLaD8lxM)
 * [Boolean cut with containers](https://www.youtube.com/watch?v=OVwazL8MQwI)
 
@@ -491,23 +491,23 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicKnifeLinks.png"> This tool allows to use single knife to cut many panels. First selected object should be knife, and all other selected objects will be cut with the knife. The knife can be any object. So, you can create your own shape of the knife and cut many panels at once. Also you can cut all legs of the table using floor or top of the table as knife. To select more objects hold left CTRL key during selection. During this process the links of knife are used, so the original knife objects will not be moved at tree. Also there will be auto labeling to keep the cut tree more informative and cleaner. This tool works with the same way as [magicKnife](#magicknife) tool but creates LinkGroup container for Knife and uses container links for cut operation. Thanks to this approach you can change Knife Cube to Pad or even add new Knife to the LinkGroup container and the cut will be updated with new Knife content. So, if you are looking for parametric cut, you should rather use this version.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Boolean cut with links](https://www.youtube.com/watch?v=EE-A6CMgb-4)
 
 ### jointTenon
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/jointTenon.png"> This tool allows to create quick tenon joint at selected face. You can select multiple faces at single object or multiple faces at multiple objects. The tenon joint offset is 1/4 of the object thickness. The tenon joint is hidden inside the object equally to the visible part. So, you can cut the tenon also at the object and create removable joint similar to the dowels. Tenons have special attribute, so they are not listed at cut-list report. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/jointTenon.png"> This tool allows to create quick tenon joint at selected face. You can select multiple faces at single object or multiple faces at multiple objects. The tenon joint offset is 1/4 of the object thickness. The tenon joint is hidden inside the object equally to the visible part. So, you can cut the tenon also at the object and create removable joint similar to the dowels. Tenons have special attribute, so they are not listed at cut-list report.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Quick Tenon and Mortise](https://www.youtube.com/watch?v=fHUjW8-37Pk)
 
 <br><br>
 
 ### cutTenons
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/cutTenons.png"> This tool allows to create mortises using tenons. This tool cut all tenons automatically for selected panel. You do not have to select and search exact tenons that belongs to the selected panel. If you select panel, this tool search for all tenons that belongs to the selected panel and apply Boolean Cut on the panel. You can select multiply panels at once to cut tenons. To select more panels hold left CTRL key during selection. During this process only the copies will be used to cut, so the original tenon will not be moved at the objects Tree. This feature is sensitive for visibility of tenons. So, you can hide tenons you do not want to be cut out from the panel. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/cutTenons.png"> This tool allows to create mortises using tenons. This tool cut all tenons automatically for selected panel. You do not have to select and search exact tenons that belongs to the selected panel. If you select panel, this tool search for all tenons that belongs to the selected panel and apply Boolean Cut on the panel. You can select multiply panels at once to cut tenons. To select more panels hold left CTRL key during selection. During this process only the copies will be used to cut, so the original tenon will not be moved at the objects Tree. This feature is sensitive for visibility of tenons. So, you can hide tenons you do not want to be cut out from the panel.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Quick Tenon and Mortise](https://www.youtube.com/watch?v=fHUjW8-37Pk)
 
 <br><br>
@@ -520,9 +520,9 @@ Selection modes:
 
 ### panel2frame
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2frame.png"> This tool allows to replace `Cube` panel with frame 45 cut at both sides. You can replace more than one `Cube` panel at once. To replace Cube objects with frames you have to select exact face at each `Cube` object. For example if you want to make picture frame, select all 4 inner faces. To select more faces hold `left CTRL key` during selection. The new created frame will get the same dimensions, placement and rotation as the selected `Cube` panel but will be cut at the selected face. If you have all construction created with simple `Cube` objects that imitating picture frame or window, you can replace all of them with realistic looking frame with single click. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2frame.png"> This tool allows to replace `Cube` panel with frame 45 cut at both sides. You can replace more than one `Cube` panel at once. To replace Cube objects with frames you have to select exact face at each `Cube` object. For example if you want to make picture frame, select all 4 inner faces. To select more faces hold `left CTRL key` during selection. The new created frame will get the same dimensions, placement and rotation as the selected `Cube` panel but will be cut at the selected face. If you have all construction created with simple `Cube` objects that imitating picture frame or window, you can replace all of them with realistic looking frame with single click.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Quick 45 cut joint](https://www.youtube.com/watch?v=aFe9p4At41c)
 
 <br><br><br>
@@ -531,7 +531,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/grainH.png"> This tool creates horizontal grain direction description at selected face. You can select multiple faces and multiple objects. Hold left CTRL key during selection. The Grain attribute will be added to the object. After adding grain direction description the object can be moved and the grain description will be moved together with the object.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Grain Direction Marker](https://www.youtube.com/watch?v=PXXKBrtAtzQ)
 * [Grain Direction Report](https://www.youtube.com/watch?v=4W6Lnkh3DRs)
 
@@ -541,7 +541,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/grainV.png"> This tool creates horizontal grain direction description at selected face. You can select multiple faces and multiple objects. Hold left CTRL key during selection. The Grain attribute will be added to the object. After adding grain direction description the object can be moved and the grain description will be moved together with the object.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Grain Direction Marker](https://www.youtube.com/watch?v=PXXKBrtAtzQ)
 * [Grain Direction Report](https://www.youtube.com/watch?v=4W6Lnkh3DRs)
 
@@ -551,7 +551,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/grainX.png"> This tool creates horizontal grain direction description at selected face. You can select multiple faces and multiple objects. Hold left CTRL key during selection. The Grain attribute will be added to the object. After adding grain direction description the object can be moved and the grain description will be moved together with the object.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Grain Direction Marker](https://www.youtube.com/watch?v=PXXKBrtAtzQ)
 * [Grain Direction Report](https://www.youtube.com/watch?v=4W6Lnkh3DRs)
 
@@ -561,7 +561,7 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicCorner.png"> This tool allows to create corner connection via Part :: Embed object FreeCAD feature. To fit corners, first select base object that will be cut, next panels that should be fited to the base object. To select multiple panels hold left CTRL key during selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Corner connection](https://www.youtube.com/watch?v=lIZFvDqgWdQ)
 
 <br><br><br>
@@ -584,25 +584,25 @@ Selection modes:
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showVertex.png"> This tool allows you to resize all vertices for easier selection. Also it change vertices color to red for better visibility. If the object have already resized vertex or changed color it will back to FreeCAD default settings. So, you can keep the model good looking with small vertices and if you have problem with vertex selection, you can quickly resize vertices for selection purposes only and back to normal later.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Helping Vertex selection](https://www.youtube.com/watch?v=qSsua04AKg8)
 
 <br><br><br>
 
 ### selectVertex
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/selectVertex.png"> This tool helps vertex selection. If you click this tool icon the tool activates observer and listen for your selection. If you select Face or Edge the nearest Vertex will be selected instead. If you select Vertex the Vertex will stay selected. The observer is closed after selection so this help works only once to not disturb face or edge selection later. If you want select more vertices with help of this tool, you have to hold left CTRL key during Edge or Face selection, you can also hold it during icon click. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/selectVertex.png"> This tool helps vertex selection. If you click this tool icon the tool activates observer and listen for your selection. If you select Face or Edge the nearest Vertex will be selected instead. If you select Vertex the Vertex will stay selected. The observer is closed after selection so this help works only once to not disturb face or edge selection later. If you want select more vertices with help of this tool, you have to hold left CTRL key during Edge or Face selection, you can also hold it during icon click.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Helping Vertex selection](https://www.youtube.com/watch?v=qSsua04AKg8)
 
 <br><br><br>
 
 ### roundCurve
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/roundCurve.png"> This tool allows to improve curve visibility. It makes the curve to look more rounded. Normally, circle Sketch is rendering from straight line segments. If you want to align panel to the curve manually this might be problem to hit exactly the point you want at curve. This tool may help for more precised alignment. If you select the curve and click this tool again the curve will back to default settings. To select more object hold left CTRL key during selection. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/roundCurve.png"> This tool allows to improve curve visibility. It makes the curve to look more rounded. Normally, circle Sketch is rendering from straight line segments. If you want to align panel to the curve manually this might be problem to hit exactly the point you want at curve. This tool may help for more precised alignment. If you select the curve and click this tool again the curve will back to default settings. To select more object hold left CTRL key during selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Align to curve](https://www.youtube.com/watch?v=fbJV_SEuNLg)
 
 <br><br><br>
@@ -613,7 +613,7 @@ Selection modes:
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerCove4.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerCove2.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerCove.png"> **Note:** This tool allows to create decoration router bits effect. You can select many edges or faces. The selected edges or faces do not have to be at the same object. You can select edges or faces at any object. But each edge or face need to be according to the XYZ coordinate axis to get correct plane of the edge or face. For face the routing path is the CenterOfMass of the face and also along the longest edge. Hold left CTRL key during edges or faces selection. The router bits get size from object thickness. If the router bit is for example Cove2, it means the size of the Cove will be 1/2 of the object thickness.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Router Cove](https://www.youtube.com/watch?v=MQYaZ4NEiBI)
 * [Decoration testing with router bits](https://www.youtube.com/watch?v=K229hhMt8Vc)
 
@@ -621,7 +621,7 @@ Selection modes:
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerRoundOver4.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerRoundOver2.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerRoundOver.png"> **Note:** This tool allows to create decoration router bits effect. You can select many edges or faces. The selected edges or faces do not have to be at the same object. You can select edges or faces at any object. But each edge or face need to be according to the XYZ coordinate axis to get correct plane of the edge or face. For face the routing path is the CenterOfMass of the face and also along the longest edge. Hold left CTRL key during edges or faces selection. The router bits get size from object thickness. If the router bit is for example Cove2, it means the size of the Cove will be 1/2 of the object thickness.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Router Round Over](https://www.youtube.com/watch?v=RErYZpqbqAY)
 * [Decoration testing with router bits](https://www.youtube.com/watch?v=K229hhMt8Vc)
 
@@ -629,7 +629,7 @@ Selection modes:
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerStraight4.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerStraight3.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerStraight2.png"> **Note:** This tool allows to create decoration router bits effect. You can select many edges or faces. The selected edges or faces do not have to be at the same object. You can select edges or faces at any object. But each edge or face need to be according to the XYZ coordinate axis to get correct plane of the edge or face. For face the routing path is the CenterOfMass of the face and also along the longest edge. Hold left CTRL key during edges or faces selection. The router bits get size from object thickness. If the router bit is for example Cove2, it means the size of the Cove will be 1/2 of the object thickness.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Router Straight](https://www.youtube.com/watch?v=NDBLmh2SwwI)
 * [Decoration testing with router bits](https://www.youtube.com/watch?v=K229hhMt8Vc)
 
@@ -637,7 +637,7 @@ Selection modes:
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerChamfer4.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerChamfer2.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/routerChamfer.png"> **Note:** This tool allows to create decoration router bits effect. You can select many edges or faces. The selected edges or faces do not have to be at the same object. You can select edges or faces at any object. But each edge or face need to be according to the XYZ coordinate axis to get correct plane of the edge or face. For face the routing path is the CenterOfMass of the face and also along the longest edge. Hold left CTRL key during edges or faces selection. The router bits get size from object thickness. If the router bit is for example Cove2, it means the size of the Cove will be 1/2 of the object thickness.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Router Chamfer](https://www.youtube.com/watch?v=Z45TDosmb-U)
 * [Decoration testing with router bits](https://www.youtube.com/watch?v=K229hhMt8Vc)
 
@@ -645,7 +645,7 @@ Selection modes:
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/multiPocket4.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/multiPocket2.png"> <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/multiPocket.png"> **Note:** This tool allows to create custom decoration from Sketches. You can select many Sketches at once. The selected Sketches will make Pockets at the first selected object. The Sketches need to be correctly aligned at the object. Hold left CTRL key during Sketches selection. For 2 and 4 variant this tool gets first selected object size and create Pocket with 1/2 thickness or 1/4 thickness.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [multiPocket custom decoration](https://www.youtube.com/watch?v=FHups7Zvl5E)
 * [Future of parametric modeling](https://www.youtube.com/watch?v=0M9EW0I9iwg)
 
@@ -701,15 +701,15 @@ Main features:
     * edgeband (quick way, described, detailed by selection),
 
 Tool repository: [github.com/dprojects/getDimensions](https://github.com/dprojects/getDimensions)
-  
-**Video tutorials:** 
+
+**Video tutorials:**
 * [Cut-list, BOM](https://www.youtube.com/watch?v=lYssiliONVo)
 * [Custom measurements & BOM](https://www.youtube.com/watch?v=-Mmwvw_Bue4)
 * [Preview furniture & cut-list](https://www.youtube.com/watch?v=xEMQUH665Vw)
 
 ### sheet2export
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sheet2export.png"> This tool allows to export cut-list, BOM to more flexible file formats. Useful if you want to print multi-page report. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sheet2export.png"> This tool allows to export cut-list, BOM to more flexible file formats. Useful if you want to print multi-page report.
 
 Main features:
 
@@ -729,7 +729,7 @@ Tool repository: [github.com/dprojects/sheet2export](https://github.com/dproject
 
 ### showSpaceModel
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showSpaceModel.png"> This tool allows to calculate occupied space in 3D by the model. This approach might be very useful at furniture designing process. For example you can see how much space in your room will take opened front of the furniture. Normally, all the `Pad` or `Cube` elements, should be created according to the `XYZ` plane, so there will be no difference between the real dimensions and occupied space in 3D. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showSpaceModel.png"> This tool allows to calculate occupied space in 3D by the model. This approach might be very useful at furniture designing process. For example you can see how much space in your room will take opened front of the furniture. Normally, all the `Pad` or `Cube` elements, should be created according to the `XYZ` plane, so there will be no difference between the real dimensions and occupied space in 3D.
 
 <br><br><br>
 
@@ -742,8 +742,8 @@ Tool repository: [github.com/dprojects/sheet2export](https://github.com/dproject
 ### magicMeasure
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicMeasure.png"> This tool allows for quick measure on objects hover or by selection. At hover mode you can measure e.g. all edges for face, single edge, single hole radius, face inside hole to get depth, ellipse both radius and also depth. At selection mode you can measure e.g. distance from vertex to another vertex, distance from hole to hole, distance from hole to edge, distance from vertex to face. This tool save also references to the measured object for further processing. So, you can easily get all your custom measurements.
-    
-**Video tutorials:** 
+
+**Video tutorials:**
 * [Smart measurement tool](https://www.youtube.com/watch?v=d2FRECuHy2o)
 * [Custom measurements & BOM](https://www.youtube.com/watch?v=-Mmwvw_Bue4)
 
@@ -755,21 +755,21 @@ Tool repository: [github.com/dprojects/sheet2export](https://github.com/dproject
 
 <br><br><br>
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Automatic parametrization](https://www.youtube.com/watch?v=JuZsAjrQr6M)
 
 ### sketch2clone
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sketch2clone.png"> This tool allows to replace selected Sketches with Clones and thanks to it, convert static model to parametric. First selected Sketch will be changed into `Parametric Pattern` for all other selected Sketches. After this operation, if you change the `Parametric Pattern` all other Sketches will be automatically updated with new pattern. For example if you have Pad, it will change the shape. Make sure the center of coordinate axes XYZ for each selected Sketch is in the middle of the pattern, this will allow for correct positioning of the Sketches. To select more objects hold left CTRL key during selection. For more complicated objects use [panel2link](#panel2link) or [panel2clone](#panel2clone) at the whole `Part`. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sketch2clone.png"> This tool allows to replace selected Sketches with Clones and thanks to it, convert static model to parametric. First selected Sketch will be changed into `Parametric Pattern` for all other selected Sketches. After this operation, if you change the `Parametric Pattern` all other Sketches will be automatically updated with new pattern. For example if you have Pad, it will change the shape. Make sure the center of coordinate axes XYZ for each selected Sketch is in the middle of the pattern, this will allow for correct positioning of the Sketches. To select more objects hold left CTRL key during selection. For more complicated objects use [panel2link](#panel2link) or [panel2clone](#panel2clone) at the whole `Part`.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Playlist for parametrization](https://www.youtube.com/playlist?list=PLSKOS_LK45BCzvg_B7oSTk1IsQnu5thtZ)
 
 ### showAlias
 
 <img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showAlias.png"> To see all objects with alias: 1. First select spreadsheet at objects Tree. 2. Click this tool icon to activate the preview mode. 3. Click any spreadsheet cell with alias. **Note:** This tool needs to be activated to work. To activate this tool you have to select spreadsheet at objects Tree and click this tool icon. If this tool will be activated you can select any cell with alias to see all objects selected. The selected objects at 3D model will be those that uses the selected alias. Also the objects will be selected at objects Tree. To finish the preview mode, click the tool icon without any selection.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Preview alias](https://www.youtube.com/watch?v=tS9pvkPH5RI)
 
 <br><br><br>
@@ -778,7 +778,7 @@ Tool repository: [github.com/dprojects/sheet2export](https://github.com/dproject
 
 ### scanObjects
 
-<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/scanObjects.png"> This is inspection tool for FreeCAD, macro or workbench tools development, live API. It allows for live preview of FreeCAD projects, code debugging, browsing FreeCAD modules, custom libraries or even command results. 
+<img align="right" width="200" height="200" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/scanObjects.png"> This is inspection tool for FreeCAD, macro or workbench tools development, live API. It allows for live preview of FreeCAD projects, code debugging, browsing FreeCAD modules, custom libraries or even command results.
 
 Main features:
 
@@ -797,7 +797,7 @@ Main features:
 
 Tool repository: [github.com/dprojects/scanObjects](https://github.com/dprojects/scanObjects)
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Debugger, Live API](https://www.youtube.com/watch?v=nFK_o95y6xk)
 * [Debugger, Search filter](https://www.youtube.com/watch?v=5h_feMn_lsQ)
 
@@ -807,11 +807,11 @@ Tool repository: [github.com/dprojects/scanObjects](https://github.com/dprojects
 
 Main features:
 
-* This tool compares date of your Woodworking workbench with the latest date for you version branch, from github repository. If the date of your Woodworking workbench match the latest master branch date you have information "up-to-date". Otherwise you have link to download the latest version from github master branch. 
+* This tool compares date of your Woodworking workbench with the latest date for you version branch, from github repository. If the date of your Woodworking workbench match the latest master branch date you have information "up-to-date". Otherwise you have link to download the latest version from github master branch.
 * Additionally, `update button` will be visible allowing you to update your workbench with single button click. The latest update for Woodworking workbench will be downloaded and unpacked. After this the FreeCAD will restart with new Woodworking workbench version. The old Woodworking workbench version will remain untouched but only disabled to protect your personal files, if there are such any.
 * This tool also run some test cases, mostly import modules used by Woodworking workbench, to find out if the FreeCAD version is safe to use.
 * Additionally, this tool will verify if your Woodworking workbench is certified.
-* There is also funny worm icon describing current verification status: 
+* There is also funny worm icon describing current verification status:
   * The worms are unhappy, if everything works.
   * The worms are happy, if everything is broken.
   * If not everything is broken, the worm will be partially happy, I mean happy and sad at the same time, good joke? ;-)
@@ -850,7 +850,7 @@ Main features:
 * `Part` is good container for many Bodies, more complicated PartDesign objects. For example if you move Pad directly to Body this will be merged with the current Pad in the Body. So, it will be single object. If you want to keep Pad separated, you can create single Body container for each Pad and keep all Bodies in Part. I rather not recommend to mix Cube with PartDesign object inside Part container. Part should rather be used only for PartDesign objects.
 * `LinkGroup` is high level, real container. You can move there many Part containers and also Cube objects. Also you can nesting LinkGroup containers. If you want to move many objects, bigger structures, rotate them, this is good container to do it.
 * `Link` is not container but it is mentioned here, because you should rather avoid linking objects directly. You should rather link LinkGroup. This approach allows you to change LinkGroup content and update the Link in real-time. If you link directly object, and the base Cube object will be replaced with Pad, the link will be broken, because the base object no longer exists. This not happen if you link the LinkGroup with Cube inside. You can replace Cube with Pad inside LinkGroup container and the link will be still correct and also the link will be updated in real-time.
-* `Group` is normal FreeCAD folder. You can't move it or rotate but it is good container to keep LinkGroup structure. 
+* `Group` is normal FreeCAD folder. You can't move it or rotate but it is good container to keep LinkGroup structure.
 
 **Note:** If you want to use `Part :: Boolean :: Cut` inside `LinkGroup` container, first you have to get out of the container all the elements using [selected2Outside](#selected2outside). See video: [Boolean cut with containers](https://www.youtube.com/watch?v=OVwazL8MQwI)
 
@@ -874,7 +874,7 @@ However, if you make your own detailed part or order somewhere, you need to fulf
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/fixture003.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 
 * [Adding dowels](https://www.youtube.com/watch?v=q7tJffBBUGY)
 * [Angles, Pilot holes, Screws](https://www.youtube.com/watch?v=CYaL-sGvIK8)
@@ -891,26 +891,26 @@ However, if you make your own detailed part or order somewhere, you need to fulf
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillDriller002.png)
 
-* If the drill bits are in correct place, click the drill button, this may takes some time, for example if you drill 30 holes for shelf pins at once and you have slow laptop as I have: 
-  
+* If the drill bits are in correct place, click the drill button, this may takes some time, for example if you drill 30 holes for shelf pins at once and you have slow laptop as I have:
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillDriller003.png)
-  
+
 * To drill rest of the hole, hide the first element with countersinks and select edge:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillDriller004.png)
 
   <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/drillCountersinks.png"> **Note:** To drill rest of the hole, you can also use [Drilling via icons](#drilling-via-icons) feature. Just select edge, next all the countersinks drill bits and click the icon. All the holes will be drilled. But do not exit the tool because the countersinks drill bits will be automatically removed. You can do it if the holes will be drilled. But also you can continue with this tool and drill the rest of holes with this tool directly.
 
-* Now click `refresh selection`, reference for the face should be updated and visible at the tool info screen. Also the drill bits will be moved to the new face, but do not worry, for this tool it is ok, just select `Holes` for hole type and exact screw. For `Hole` type, the depth is adjusted with panel thickness. However, if you have different panel sizes you can adjust it, as well: 
-  
+* Now click `refresh selection`, reference for the face should be updated and visible at the tool info screen. Also the drill bits will be moved to the new face, but do not worry, for this tool it is ok, just select `Holes` for hole type and exact screw. For `Hole` type, the depth is adjusted with panel thickness. However, if you have different panel sizes you can adjust it, as well:
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillDriller005.png)
-  
+
 * Now click to drill and the rest of the holes will be drilled at the edge:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillDriller006.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillDriller007.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Countersinks & realistic screws](https://www.youtube.com/watch?v=N5SpUCtNMY0)
 
 ## Drilling via icons
@@ -920,58 +920,58 @@ However, if you make your own detailed part or order somewhere, you need to fulf
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles001.png)
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles002.png)
-  
+
 * To drill the hole select face and drill bit in this order. The selected drill bit must be at the end. The face to drill should be first.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles003.png)
-    
+
 * Now to drill hole click the exact icons for the drill bit and the hole will be drilled below the drill bit.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles004.png)
-  
+
 * You can also copy the drill bit and select more at once:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles005.png)
-  
+
 * If you click the icon for the hole all holes will be created:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles006.png)
-  
+
 * The holes have the same size as the drill bits:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillHoles007.png)
-  
+
 ## Drilling via magicCNC
 
 * First select exact place to drill:
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC001.png)
-  
-* Create drill bit, in this case countersink, select the face and the drill bit. Next open [magicCNC](#magiccnc) tool. You can also first open the [magicCNC](#magiccnc) tool and then set then refresh selection to set exact objects references. 
+
+* Create drill bit, in this case countersink, select the face and the drill bit. Next open [magicCNC](#magiccnc) tool. You can also first open the [magicCNC](#magiccnc) tool and then set then refresh selection to set exact objects references.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC002.png)
 
 * With this tool you can precisely move the drill bit to any place at the surface and drill any type of hole just by single button click. You can also turn on and off the transform edit and move the drill bit by hand. The [magicCNC](#magiccnc) tool recognize the drill bit type by label. For countersink the label need to have "countersink", for counterbore the "counterbore". If nothing will be found the simple hole will be drilled. The tool support only single hole at once but allows you to drill hole very quickly, just by moving and clicking drill. In this example the countersink has been created in the first element:
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC003.png)
-  
+
 * To drill rest of the hole you have to change the face reference. To do that, hide the first element and select face and drill bit:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC004.png)
-  
+
 * Now click `refresh selection` to load new references:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC005.png)
 
 * Now you can click drilling button to create rest of the hole:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC006.png)
-  
+
 * Now the hole is created through two elements and the countersink is in the righ place, and also the depth of the hole is equally divided into both elements, like it should be in real-life:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillCNC007.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 
 * [Drilling holes](https://www.youtube.com/watch?v=SS-fnr_ud2I)
 * [Drilling counterbores](https://www.youtube.com/watch?v=xpEWPRFq-7A)
@@ -979,29 +979,29 @@ However, if you make your own detailed part or order somewhere, you need to fulf
 ## Pilot holes for angles, hinges
 
 * To create pilot holes for angle, first set the angle into position with [magicFixture](#magicfixture). Remember to set `Clone` option, because if you make a `Link` the drill bits will be created at the base element, and you will not be albe to drill holes.
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillAngles001.png)
 
-* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/edge2drillbit.png"> Next select each hole edge inside the fillets and click [edge2drillbit](#edge2drillbit). If the angle do not have fillet it is fine, you can select the hole edge as well. The drill bits will be created above each hole and the drill bits diameter will be a little smaller than the hole. It is OK for pilot hole. Pilot hole should be usually smaller 1 mm than the screw. If you want you can also resize the drill bits. 
+* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/edge2drillbit.png"> Next select each hole edge inside the fillets and click [edge2drillbit](#edge2drillbit). If the angle do not have fillet it is fine, you can select the hole edge as well. The drill bits will be created above each hole and the drill bits diameter will be a little smaller than the hole. It is OK for pilot hole. Pilot hole should be usually smaller 1 mm than the screw. If you want you can also resize the drill bits.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillAngles002.png)
 
 * <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/drillHoles.png"> Now you can select face of the element to drill and than all the drill bits for the element. If you have this selected you have to click the [drillHoles](#drillholes) icon. All the holes will be created. If the element was Cube it will be automatically changed into Pad, and than all holes will be drilled.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillAngles003.png)
-  
+
 * Do the same for second element and you should have all pilot holes drilled precisely and quickly aligned.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillAngles004.png)
 
 **Note:** The same procedure you can use to drill pilot holes for hinges or any other fixture.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Angles, Pilot holes, Screws](https://www.youtube.com/watch?v=CYaL-sGvIK8)
 
 # Pocket holes - invisible connections
 
-Personally I do not use this type of connections because I am not convinced to it, and also I do not have such jig. But I know that many woodworkers use pocket invisible connections and they love it. They use it especially for real wood and than put dowels inside the holes so the screws are not visible at all. 
+Personally I do not use this type of connections because I am not convinced to it, and also I do not have such jig. But I know that many woodworkers use pocket invisible connections and they love it. They use it especially for real wood and than put dowels inside the holes so the screws are not visible at all.
 
 ## Drill pocket holes - manually
 
@@ -1019,10 +1019,10 @@ Personally I do not use this type of connections because I am not convinced to i
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillPocketHoles003.png)
 
-* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/drillHoles.png"> Now select the panel surface you want to drill and all the dowels. If you have it selected click [drillHoles](#drillholes) and all the holes should be created with exact 15 degree angle. 
+* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/drillHoles.png"> Now select the panel surface you want to drill and all the dowels. If you have it selected click [drillHoles](#drillholes) and all the holes should be created with exact 15 degree angle.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillPocketHoles004.png)
-  
+
 * This is not exactly what should be, because the drill bit for pocket holes in real-life has a little smaller tip at the end. So there should be also smaller hole at the end. But for this manually way it looks not so bad, in my opinion:
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillPocketHoles005.png)
@@ -1042,7 +1042,7 @@ Personally I do not use this type of connections because I am not convinced to i
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillPocketHoles010.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/DrillPocketHoles011.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Pocket holes & realistic screws](https://www.youtube.com/watch?v=eXzYXNbWwqM)
 
 # Realistic parts
@@ -1067,12 +1067,12 @@ Personally I do not use this type of connections because I am not convinced to i
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticScrews005.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticScrews006.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticScrews007.png)
-  
+
 * You can also apply textures for the elements to get more realistic preview:
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticScrews008.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Pocket holes & realistic screws](https://www.youtube.com/watch?v=eXzYXNbWwqM)
 
 ## Realistic screws and angles
@@ -1083,32 +1083,32 @@ Personally I do not use this type of connections because I am not convinced to i
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticAngles002.png)
 
 * For other element also first select face of the element, and next all `Sketches` of the holes. This allow you to create dowels directly from `Sketches` with exact orientation and size. If you have it selected click [sketch2dowel](#sketch2dowel):
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticAngles003.png)
-  
+
 * <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2link.png"> Now merge realistic screw with your current active document. You can create such screw with PartDesign or even order such realistic part. For this case I use [Screw 4 x 16 mm](https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture#screw-4-x-16-mm) from [Fixture examples](https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture). The dowels applied before is some kind of references points and they can be replaced with realistic screws. To replace the fake screws with realistic screws. Select the realistic screw and next all the fake dowels. Next click [panel2link](#panel2link) icon:
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticAngles004.png)
-  
-* As you see the screws are above the holes. To hide them all, select the `Body` container of the base screw, and move it down as much you want, you can use [magicMove](#magicmove) for that with exact step: 
+
+* As you see the screws are above the holes. To hide them all, select the `Body` container of the base screw, and move it down as much you want, you can use [magicMove](#magicmove) for that with exact step:
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticAngles005.png)
 
   **Note:** I use a little bigger screws for angles than normally should be, because they hold things a little better than `3 x 20 mm` ones, so the head of the screw is not flat with the surface but you can use any screw size with the same way. For hinges you can use `3 x 20 mm`, without pilot holes.
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Angles, Pilot holes, Screws](https://www.youtube.com/watch?v=CYaL-sGvIK8)
 
 ## Realistic screws and pocket holes
 
-* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/edge2dowel.png"> First select edge of the hole inside the pocket hole and click [edge2dowel](#edge2dowel). You can select all edges for the panel to create dowels. The dowels should be created with exact angle, so it will be more easy to adjust the screw later. 
+* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/edge2dowel.png"> First select edge of the hole inside the pocket hole and click [edge2dowel](#edge2dowel). You can select all edges for the panel to create dowels. The dowels should be created with exact angle, so it will be more easy to adjust the screw later.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews001.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews002.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews003.png)
 
 * <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2link.png"> Now merge with you active document exact screw. In my case I use 19 mm thickness panel. According to the [Wolfcraft Guide to Wood Joints](https://www.wolfcraft.com/products/wolfcraft/en/EUR/Products/Wood-Joints/Dowel-Jointers/Undercover-Jig-Set/p/P_4642) I have to merge screw `4 x 30 mm`. If you have merged the screw, replace all the fake dowels with the realistc screw using [panel2link](#panel2link):
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews004.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews005.png)
 
@@ -1119,7 +1119,7 @@ Personally I do not use this type of connections because I am not convinced to i
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews008.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticPocketScrews009.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Pocket holes & realistic screws](https://www.youtube.com/watch?v=eXzYXNbWwqM)
 
 ## Counterbore 2x with bolt
@@ -1130,13 +1130,13 @@ Personally, the two side counterbore I use for screwing things to the table. I u
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticCounterbore2x001.png)
 
-* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sketch2dowel.png"> Now I use the [sketch2dowel](#sketch2dowel) tool to have the fake dowels aligned correctly. First select the top face of the wood and than all second Sketches. First Sketch is always from the side of drill bit. The next Sketch is from the other side according to the wood thickness. 
+* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/sketch2dowel.png"> Now I use the [sketch2dowel](#sketch2dowel) tool to have the fake dowels aligned correctly. First select the top face of the wood and than all second Sketches. First Sketch is always from the side of drill bit. The next Sketch is from the other side according to the wood thickness.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticCounterbore2x002.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticCounterbore2x003.png)
 
 <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/panel2clone.png"> Now merge realistic bolt designed for double counterbore with your current active document. You can create such screw with PartDesign or even order such realistic part. For this case I use [Conterbore2x_5_x_60_mm](https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture#conterbore2x-5-x-60-mm) from [Fixture examples](https://github.com/dprojects/Woodworking/tree/master/Examples/Fixture). The dowels applied before is some kind of references points and they can be replaced with realistic bolts. To replace the fake dowels with realistic bolt, select the realistic bolt and next all the fake dowels. Next click [panel2clone](#panel2clone) icon. If you clone the realistic part you can remove later the original part.
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticCounterbore2x004.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticCounterbore2x005.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RealisticCounterbore2x006.png)
@@ -1156,27 +1156,26 @@ Working with raw wood is an art of some sort. This is the true form of working w
 * To simulate the creation of a glued table top. First, you can create an irregular shape from panels of different length. You can also use a different thickness, and then simulate a thickness planer woodworking tool. But for the sake of simplicity, I chose panels of the same thickness.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued001.png)
-  
-* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/setTextures.png"> Using [setTextures](#settextures) tool you can simulate grain direction. I use [texture samples](https://commons.wikimedia.org/w/index.php?title=Special:ListFiles/Dprojects&ilshowall=1) but you can also create your own textures, looking much better or even mark the grain direction using colors only. 
+
+* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/setTextures.png"> Using [setTextures](#settextures) tool you can simulate grain direction. I use [texture samples](https://commons.wikimedia.org/w/index.php?title=Special:ListFiles/Dprojects&ilshowall=1) but you can also create your own textures, looking much better or even mark the grain direction using colors only.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued002.png)
-  
-* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicDowels.png"> Using [magicDowels](#magicdowels) tool you can apply dowels. I use standard predefined dowels but you can use any joints you like. Also you may want to drill holes. It depends how precisely you want to simulate this process. 
+
+* <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicDowels.png"> Using [magicDowels](#magicdowels) tool you can apply dowels. I use standard predefined dowels but you can use any joints you like. Also you may want to drill holes. It depends how precisely you want to simulate this process.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued003.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued004.png)
-  
+
 * <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/magicKnife.png"> Using [magicKnife](#magicknife) tool you can simulatee the cuting edges process. The "knife" should be larger to cut off the irregular protruding part of the panels. Make a note that if the panel will be cut, the texture disappear because it is applied at base object that is hidden after cut. But you can bring it back by applying the texture to the cut object.
 
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued005.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued006.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued007.png)
-  
+
 * <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/showSpaceSelected.png"> <img align="left" width="50" height="50" src="https://raw.githubusercontent.com/dprojects/Woodworking/master/Icons/getDimensions.png"> You can use [showSpaceSelected](#showspaceselected) to see oaccupied space by any selected panel after cut or even by all the parts. Not use [showSpaceModel](#showspacemodel) because it also calculates the hidden elements, "knives". However you can also create report via [getDimensions](#getdimensions) with the base elements used before cut.
-  
+
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued008.png)
   ![img](https://raw.githubusercontent.com/dprojects/Woodworking/master/Docs/Screenshots/RawWoodGlued009.png)
 
-**Video tutorials:** 
+**Video tutorials:**
 * [Glued table top simulation (force order of operations)](https://www.youtube.com/watch?v=SULl3EmCTsk)
-

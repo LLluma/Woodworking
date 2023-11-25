@@ -78,13 +78,13 @@ FreeCAD is great software and this is extension for Woodworking. The main goal f
 		Hash: eb546e25d3f952869e3ec87dca02b58653cb3936
 		Python 3.10.6, Qt 5.15.4, Coin 4.0.0, Vtk 9.1.0, OCC 7.6.3
 		Locale: English/United States (en_US)
-		Installed mods: 
+		Installed mods:
 		* Woodworking 0.21.30486
 
 **Note:**
 
 * I don't have `Windows` or `macOS`, so I am not able to test and certify this workbench for those systems. However, if you use `FreeCAD AppImage` there is big chance this will be working correctly.
-* To get better stability make sure your current Woodworking workbench version has always the same version number as the FreeCAD version. You can also verify this via [debuginfo](https://github.com/dprojects/Woodworking/tree/master/Docs#debuginfo) tool. 
+* To get better stability make sure your current Woodworking workbench version has always the same version number as the FreeCAD version. You can also verify this via [debuginfo](https://github.com/dprojects/Woodworking/tree/master/Docs#debuginfo) tool.
 
 # Extras
 
@@ -97,7 +97,7 @@ This woodworking workbench is delivered with several useful extras:
 # API for developers
 
 The Woodworking workbench has also API for developers. This library contains functions that solve the Topology Naming Problem. You can also leaglly create your own tools and extend the workbench in your private repository in accordance with the MIT license:
-	
+
 * **View library API documentation:** [MagicPanelsAPI.md](https://github.com/dprojects/Woodworking/blob/master/Docs/MagicPanelsAPI.md)
 * **View library code:** [MagicPanels.py](https://github.com/dprojects/Woodworking/blob/master/Tools/MagicPanels/MagicPanels.py)
 * **Download & install library:** [raw version](https://raw.githubusercontent.com/dprojects/Woodworking/master/Tools/MagicPanels/MagicPanels.py)
